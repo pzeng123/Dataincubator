@@ -6,14 +6,15 @@
 ## disk 1 to move to position 1 and disk 2 to move to position 2. We choose moves uniformly at random amongst all valid moves at a given time.
 ## We are interested in the position of the center of mass after T moves, that is ∑d×pd/∑d, where d is the disk weight and pd is the position
 ## of a disk weighing d.
-##       ___________
-##    0 |  O|   |   |
-##      |___|___|___|
-##    1 |  O|   |   |
-##      |___|___|___|
-##    2 |  O|   |   |
-##      |___|___|___| 
-##        0   1   2
+##       ___________           ___________                   
+##    0 | d1|   |   |       0 |   | d1|   |           
+##      |___|___|___|         |___|___|___|         
+##    1 | d2|   |   |       1 | d2|   |   |
+##      |___|___|___|  =>     |___|___|___| 
+##    2 | d3|   |   |       2 | d3|   |   |
+##      |___|___|___|         |___|___|___| 
+##        0   1   2             0   1   2
+##            The first Move from state 0 to state 1. state number =    ∑ dn * N**(position of dn), represents the disks array
 ##
 ##      _________
 ##      | state1|----->  {next_state1:counts,    next_state2:counts, ...   }
